@@ -1,4 +1,4 @@
-CREATE INDEX idx ON sales(year_id,country,sales);
+CREATE INDEX sale_index ON sales(year_id,sales,country);
 
 ----Count all customers who ordered from the country USA
 SELECT COUNT(DISTINCT customername) AS total_customers FROM sales WHERE country = 'USA';
