@@ -1,8 +1,10 @@
+CREATE INDEX sale_indx1 ON sales(country,year_id,sales);
+
 --Count the customers who are all ordered from the country USA
 SELECT COUNT(DISTINCT CUSTOMERNAME) FROM SALES WHERE COUNTRY='USA';
 
 --Count the customers who are all purchase the product above 5000
-SELECT COUNT(DISTINCT CUSTOMERNAME) FROM Sales WHERE SALES>5000;
+SELECT COUNT(DISTINCT CUSTOMERNAME) FROM Sales WHERE priceeach*quantityordered > 5000;
 
 --Find how many products are ordered in the year 2003
 SELECT COUNT(DISTINCT PRODUCTCODE) FROM SALES WHERE YEAR_ID=2003;
