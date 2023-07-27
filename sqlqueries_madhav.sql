@@ -5,7 +5,7 @@ select count(distinct CUSTOMERNAME) as CustomerName from sales where COUNTRY = '
 select COUNT(distinct CUSTOMERNAME) as CountCustomer from sales where SALES > 5000;
 
 
-select count(PRODUCTCODE) as ProductCount from sales
+select count(distinct PRODUCTCODE) as ProductCount from sales
 where YEAR_ID = 2003;
 
 
