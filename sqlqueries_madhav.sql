@@ -1,8 +1,8 @@
-create index sales_idx on sales( PRICEEACH, YEAR_ID, COUNTRY);
+create index sales_idx on sales( PRICEEACH, QUANTITYORDERED, YEAR_ID, COUNTRY);
 
 select count(distinct CUSTOMERNAME) as CustomerName from sales where COUNTRY = 'USA';
 
-select COUNT(distinct CUSTOMERNAME) as CountCustomer from sales where SALES > 5000;
+select COUNT(distinct CUSTOMERNAME) as CountCustomer from sales where PRICEEACH * QUANTITYORDERED > 5000;
 
 
 select count(distinct PRODUCTCODE) as ProductCount from sales
