@@ -1,8 +1,10 @@
---Count all customers who ordered from the country USA
+CREATE INDEX idx ON sales(year_id,country,sales);
+
+----Count all customers who ordered from the country USA
 SELECT COUNT(DISTINCT customername) AS total_customers FROM sales WHERE country = 'USA';
 
 --Count all customers who purchased the product exceeding 5000
-SELECT COUNT(DISTINCT customername) AS customer_count FROM sales WHERE sales > 5000;
+SELECT COUNT(DISTINCT customername) AS customer_count FROM sales WHERE priceeach*quantityordered > 5000;
 
 --Find how many products are ordered in the year 2003
 SELECT COUNT(DISTINCT productcode) AS product_count FROM sales WHERE year_id = 2003;
