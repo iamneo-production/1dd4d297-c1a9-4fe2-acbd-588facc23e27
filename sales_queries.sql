@@ -12,4 +12,3 @@ SELECT SUM(sales) AS total_sale_price FROM sales WHERE year_id=2005;
 
 --Find the total sale price of each year
 SELECT year_id, SUM(sales) AS total_sale_price FROM sales GROUP BY YEAR_ID;
-
