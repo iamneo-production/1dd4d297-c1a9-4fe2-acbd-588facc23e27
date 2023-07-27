@@ -1,4 +1,4 @@
-CREATE INDEX sale_indx1 ON sales(country,year_id,sales);
+CREATE index indx1 on SALES(priceeach,year_id,country,sales);
 
 --Count the customers who are all ordered from the country USA
 SELECT COUNT(DISTINCT CUSTOMERNAME) FROM SALES WHERE COUNTRY='USA';
