@@ -2,7 +2,7 @@
 SELECT COUNT(DISTINCT customername) AS total_customers FROM sales WHERE country = 'USA';
 
 --Count all the customers who purchased the product exceeding 5000
-SELECT COUNT(DISTINCT customername) AS customer_count FROM sales WHERE sales > 5000;
+SELECT COUNT(DISTINCT customername) AS customer_count FROM sales WHERE PRICEEACH*QUANTITYORDERED > 5000;
 
 --Find how many products are ordered in the year 2003
 SELECT COUNT(DISTINCT productcode) AS product_code FROM sales where year_id=2003;
