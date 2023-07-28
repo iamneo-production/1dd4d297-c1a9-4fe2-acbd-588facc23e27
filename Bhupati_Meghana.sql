@@ -11,4 +11,9 @@ SELECT COUNT(DISTINCT PRODUCTCODE) AS ProductsCountIn2003 FROM SALES WHERE YEAR_
 SELECT SUM(SALES) AS TotalPriceInYear2005 FROM SALES WHERE YEAR_ID=2005;
 
 --Find the total sale price of each year
+<<<<<<< HEAD
 SELECT YEAR_ID, SUM(SALES) AS TotalPrice FROM SALES GROUP BY YEAR_ID;
+=======
+SELECT YEAR_ID, SUM(SALES) AS TotalPrice FROM SALES GROUP BY YEAR_ID;
+
+>>>>>>> Oracle-Workspace-MeghanaBhupati
